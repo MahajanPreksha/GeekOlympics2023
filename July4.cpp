@@ -2,7 +2,8 @@
 class Solution{
   public:
     int countSubArrayProductLessThanK(const vector<int>& a, int n, long long k) {
-        int i = 0, res = 0, product = 1;
+        int i = 0, res = 0;
+        long long product = 1;
         for(int l=0; l<n; l++){
             product *=a[l];
             while(product>=k && i<n){
